@@ -1,0 +1,46 @@
+<nav class="nav_wrapper">
+    <div class="nav-wrapper">
+        <a href="/" class="brand-logo">Node courses</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {{#if isHomePage}}
+                <li class="nav-item active">
+                    <a href="/">Главная</a>
+                </li>
+            {{else}}
+                <li class="nav-item">
+                    <a href="/">Главная</a>
+                </li>
+            {{/if}}
+
+            {{#if isAllCourses}}
+                <li class="nav-item active">
+                    <a href="/all-courses">Все курсы</a>
+                </li>
+            {{else}}
+                <li class="nav-item">
+                    <a href="/all-courses">Все курсы</a>
+                </li>
+            {{/if}}
+
+            {{#if isAddCourse}}
+                <li class="nav-item active">
+                    <a href="/add">Добавить курс</a>
+                </li>
+            {{else}}
+                <li class="nav-item">
+                    <a href="/add">Добавить курс</a>
+                </li>
+            {{/if}}
+
+            {{#if idCard}}
+                <li class="nav-item active">
+                    <a href="/card">Card</a>
+                </li>
+            {{else}}
+                <li class="nav-item">
+                    <a href="/card">Card</a>
+                </li>
+            {{/if}}
+        </ul>
+    </div>
+</nav>
