@@ -1,1 +1,30 @@
 <h1>{{title}}</h1>
+<div id="card">
+    {{#if card.courses.length}}
+        <table>
+            <thead>
+                <tr>
+                    <td>Course</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Actions</td>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each card.courses}}
+                  <tr>
+                      <td>{{title}}</td>
+                      <td>{{price}}</td>
+                      <td>{{count}}</td>
+                      <td>
+                          <button class="btn standart-btn delete_course_btn" data-id="{{id}}">Delete</button>
+                      </td>
+                  </tr>
+                {{/each}}
+            </tbody>
+        </table>
+        <p class="total-price">Total price: <span class="price">{{card.totalPrice}}</span></p>
+    {{else}}
+       <p>Your card is empty</p>
+    {{/if}}
+</div>

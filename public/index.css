@@ -44,3 +44,8 @@ main {
 .card_buy > form > button {
     width: 40%;
 }
+
+.total-price,
+.total-price > .price{
+    font-size: 25px;
+}
