@@ -3,10 +3,10 @@ const router = Router()
 const Course = require('../model/course')
 const Card = require('../model/card')
 
-router.post('/', (req, res) => {
-    const id = req.body.id
+router.post('/', async (req, res) => {
+    const course = req.body
 
-    Card.add(id)
+    await Card.addCourse({...course})
 
     res.redirect('/card')
 })

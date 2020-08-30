@@ -19,7 +19,10 @@
                         </div>
                         <div class="card_buy">
                             <form action="/card" method="POST">
-                                <input type="hidden" value="{{id}}">
+                                <input type="hidden" value="{{id}}" name="id">
+                                <input type="hidden" value="{{title}}" name="title">
+                                <input type="hidden" value="{{price}}" name="price">
+                                <input type="hidden" value="{{imgURL}}" name="imgURL">
                                 <button type="submit" class="btn standart-btn">Buy</button>
                             </form>
                         </div>
