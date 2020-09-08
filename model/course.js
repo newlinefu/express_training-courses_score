@@ -1,70 +1,24 @@
-const uuid = require('uuid').v4
-const path = require('path')
-const fs = require('fs')
-const pathToData = path.join(__dirname, '../', 'data', 'courses.json')
+const {model, Schema} = require('mongoose')
 
-class Course {
-    constructor(title, price, imgURL) {
-        this.title = title
-        this.price = price
-        this.imgURL = imgURL
-        this.id = uuid()
+const course = new Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    price: {
+        type: Number,
+        required: true
+    },
+    imgURL: {
+        type: String,
+        required: true
+    },
+    user: {
+        type: Schema.Types.ObjectID,
+        required: true,
+        ref: 'User'
     }
+})
 
-    async add() {
-        const allCourses = await Course.readData()
-        allCourses.push(this)
+module.exports = model('Course', course)
 
-        return new Promise((resolve, reject) => {
-            fs.writeFile(
-                pathToData,
-                JSON.stringify(allCourses),
-                (err) => {
-                    if(err) reject(err)
-                    else resolve()
-                }
-            )
-        })
-    }
-
-    static async update(course) {
-        const allData = await Course.readData()
-        const index = allData.findIndex(item => course.id === course.id)
-
-        allData[index] = course
-
-        return new Promise((resolve, reject) => {
-            fs.writeFile(
-                pathToData,
-                JSON.stringify(allData),
-                err => {
-                    if (err) reject(err)
-                    else resolve()
-                }
-            )
-        })
-    }
-
-    static readData() {
-        return new Promise((resolve, reject) => {
-            fs.readFile(
-                pathToData,
-                (err, data) => {
-                    if (err) {
-                        reject(err)
-                    } else {
-                        resolve(JSON.parse(data))
-                    }
-                }
-            )
-        })
-    }
-
-    static async getDataById(id) {
-        const allData = await Course.readData()
-
-        return allData.find(course => course.id === id)
-    }
-}
-
-module.exports = Course

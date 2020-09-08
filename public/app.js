@@ -54,7 +54,7 @@ if(cardElement) {
                             resultCardHTML += `
                                     </tbody>
                                 </table>
-                                <p class="total-price">Total price: <span class="price">${toCurrency(objectCard.totalPrice)}</span></p>
+                                <p class="total-price">Total price: <span class="price">${toCurrency(objectCard.totalCount)}</span></p>
                             `
                             cardElement.innerHTML = resultCardHTML
                         } else {

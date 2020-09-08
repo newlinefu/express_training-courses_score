@@ -1,5 +1,9 @@
-<h1>Add course</h1>
 
+<!--
+    Страница добавления курса.
+-->
+
+<h1>Add course</h1>
 <form action="/add" method="POST">
     <div class="input-field col s6">
         <input id="title" type="text" class="validate" name="title" required>
@@ -12,11 +16,9 @@
     </div>
 
     <div class="input-field col s6">
-        <input id="course_image" type="text" class="validate" name="img" required>
+        <input id="course_image" type="text" class="validate" name="imgURL" required>
         <label for="course_image">Image URL</label>
     </div>
 
-    <button class="btn standart-btn">Добавить курс</button>
+    <button type="submit" class="btn standart-btn">Добавить курс</button>
 </form>
-
-<!-- <span class="helper-text" data-error="wrong" data-success="right">Helper text</span> -->

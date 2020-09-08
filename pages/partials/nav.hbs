@@ -32,13 +32,23 @@
                 </li>
             {{/if}}
 
-            {{#if idCard}}
+            {{#if isCard}}
                 <li class="nav-item active">
                     <a href="/card">Card</a>
                 </li>
             {{else}}
                 <li class="nav-item">
                     <a href="/card">Card</a>
+                </li>
+            {{/if}}
+
+            {{#if isOrders}}
+                <li class="nav-item active">
+                    <a href="/orders">Orders</a>
+                </li>
+            {{else}}
+                <li class="nav-item">
+                    <a href="/orders">Orders</a>
                 </li>
             {{/if}}
         </ul>

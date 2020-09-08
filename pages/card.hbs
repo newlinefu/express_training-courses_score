@@ -1,3 +1,8 @@
+
+<!--
+    Страница корзины
+-->
+
 <h1>{{title}}</h1>
 <div id="card">
     {{#if card.courses.length}}
@@ -23,7 +28,7 @@
                 {{/each}}
             </tbody>
         </table>
-        <p class="total-price">Total price: <span class="price">{{card.totalPrice}}</span></p>
+        <p class="total-price">Total price: <span class="price">{{card.totalCount}}</span></p>
     {{else}}
        <p>Your card is empty</p>
     {{/if}}

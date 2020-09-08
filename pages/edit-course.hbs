@@ -1,6 +1,6 @@
 <h1>Edit course</h1>
 
-<form action="/all-courses/edit-course" method="POST">
+<form action="/all-courses/edit-course" method="POST" class="edit_form">
     <div class="input-field col s6">
         <input id="title" type="text" class="validate" name="title" value="{{course.title}}" required>
         <label for="title">Title</label>
@@ -19,4 +19,9 @@
     <input type="text" hidden value="{{course.id}}" name="id">
 
     <button class="btn standart-btn">Edit course</button>
+</form>
+
+<form action="/all-courses/delete-course" method="POST">
+    <input type="hidden" value="{{course.id}}" name="id">
+    <button class="btn red">Delete</button>
 </form>

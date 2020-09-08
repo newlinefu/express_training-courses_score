@@ -10,9 +10,23 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    const addingCourse = new Course(req.body.title, req.body.price, req.body.img)
-    await addingCourse.add()
-    res.redirect('/all-courses')
+
+    const addingCourse = new Course({
+        title: req.body.title,
+        price: req.body.price,
+        imgURL: req.body.imgURL,
+        user: req.user
+    })
+
+    try {
+        await addingCourse.save()
+        res.redirect('/all-courses')
+
+    } catch (err) {
+        console.log(err)
+        res.redirect('/add')
+    }
+
 })
 
 module.exports = router
