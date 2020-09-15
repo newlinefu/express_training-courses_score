@@ -57,4 +57,9 @@ user.methods.deleteFromCard = function(id) {
     return this.save()
 }
 
+user.methods.clearCard = function() {
+    this.card = {courses: []}
+    return this.save()
+}
+
 module.exports = model('User', user)

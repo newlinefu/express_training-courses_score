@@ -1,1 +1,30 @@
-<h1>{{title}}</h1>
+<h1>My orders</h1>
+
+{{#if orders.length}}
+    {{#each orders}}
+        <div class="row">
+            <div class="col offset-s3 s6">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">
+                            {{id}}
+                        </span>
+                        <p class="date">{{date}}</p>
+                        <p><em>{{user.id.name}} </em><strong>{{user.id.email}}</strong></p>
+                        <ol>
+                            {{#each courses}}
+                                <li>
+                                    {{courseId.title}}
+                                </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+{{else}}
+    <div>
+        Orders not found
+    </div>
+{{/if}}

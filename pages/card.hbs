@@ -29,6 +29,9 @@
             </tbody>
         </table>
         <p class="total-price">Total price: <span class="price">{{card.totalCount}}</span></p>
+        <form method="POST" action="/orders">
+            <button type="submit" class="btn">To order</button>
+        </form>
     {{else}}
        <p>Your card is empty</p>
     {{/if}}

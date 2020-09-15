@@ -1,13 +1,7 @@
 const {model, Schema} = require('mongoose')
 
 const order = new Schema({
-    date: {
-        type: Date,
-        required: true,
-        default: Date.now
-    },
     user: {
-        name: String,
         id: {
             type: Schema.Types.ObjectID,
             ref: 'User',
@@ -16,10 +10,22 @@ const order = new Schema({
     },
     courses: [
         {
-            type: Object,
-            required: true
+            course: {
+                type: Object,
+                required: true
+            },
+            count: {
+                type: Number,
+                required: true,
+                default: 1
+            }
         }
-    ]
+    ],
+    date: {
+        type: Date,
+        required: true,
+        default: Date.now
+    },
 })
 
 module.exports = model('Order', order)
