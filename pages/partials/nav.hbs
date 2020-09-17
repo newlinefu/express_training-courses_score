@@ -2,6 +2,7 @@
     <div class="nav-wrapper">
         <a href="/" class="brand-logo">Node courses</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+
             {{#if isHomePage}}
                 <li class="nav-item active">
                     <a href="/">Главная</a>
@@ -22,34 +23,49 @@
                 </li>
             {{/if}}
 
-            {{#if isAddCourse}}
-                <li class="nav-item active">
-                    <a href="/add">Добавить курс</a>
-                </li>
-            {{else}}
-                <li class="nav-item">
-                    <a href="/add">Добавить курс</a>
-                </li>
-            {{/if}}
+            {{#if isAuth}}
+                {{#if isAddCourse}}
+                    <li class="nav-item active">
+                        <a href="/add">Добавить курс</a>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a href="/add">Добавить курс</a>
+                    </li>
+                {{/if}}
 
-            {{#if isCard}}
-                <li class="nav-item active">
-                    <a href="/card">Card</a>
-                </li>
-            {{else}}
-                <li class="nav-item">
-                    <a href="/card">Card</a>
-                </li>
-            {{/if}}
+                {{#if isCard}}
+                    <li class="nav-item active">
+                        <a href="/card">Card</a>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a href="/card">Card</a>
+                    </li>
+                {{/if}}
 
-            {{#if isOrders}}
-                <li class="nav-item active">
-                    <a href="/orders">Orders</a>
-                </li>
+                {{#if isOrders}}
+                    <li class="nav-item active">
+                        <a href="/orders">Orders</a>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a href="/orders">Orders</a>
+                    </li>
+                {{/if}}
+                    <li class="nav-item">
+                        <a href="/auth/logout">Logout</a>
+                    </li>
             {{else}}
-                <li class="nav-item">
-                    <a href="/orders">Orders</a>
-                </li>
+                {{#if isLogin}}
+                    <li class="nav-item active">
+                        <a href="/auth/login#authorizate">Authorizate</a>
+                    </li>
+                {{else}}
+                    <li class="nav-item">
+                        <a href="/auth/login#authorizate">Authorizate</a>
+                    </li>
+                {{/if}}
             {{/if}}
         </ul>
     </div>

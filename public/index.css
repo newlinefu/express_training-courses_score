@@ -53,3 +53,12 @@ main {
 .edit_form {
     margin-bottom: 20px;
 }
+
+.auth_wrapper {
+    margin-top: 2rem;
+}
+
+#authorizate,
+#registrate {
+    text-align: center;
+}

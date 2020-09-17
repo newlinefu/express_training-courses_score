@@ -23,11 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a60dfa7a-be10-4c39-adff-fb55330a64d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/middlewares/variable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/auth/auth.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routes/auth_router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/card.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/card.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/orders.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/orders.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/partials/nav.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/partials/nav.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/orders_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/orders_router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +54,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1ggtDbc6Ii8zCp4xn3NffZhEyhR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -90,7 +99,10 @@
       <workItem from="1599775701516" duration="54000" />
       <workItem from="1600112581711" duration="5761000" />
       <workItem from="1600145590677" duration="15000" />
-      <workItem from="1600156273361" duration="1567000" />
+      <workItem from="1600156273361" duration="1604000" />
+      <workItem from="1600165229404" duration="57000" />
+      <workItem from="1600185226509" duration="10888000" />
+      <workItem from="1600359804124" duration="70000" />
     </task>
     <servers />
   </component>
@@ -122,6 +134,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1598548334269" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1600193094700">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600193094700" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598551948946">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

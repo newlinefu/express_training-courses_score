@@ -14,10 +14,12 @@
                         <ol>
                             {{#each courses}}
                                 <li>
-                                    {{courseId.title}}
+                                    <span>{{course.title}} (x{{count}})</span>
                                 </li>
                             {{/each}}
                         </ol>
+                        <hr>
+                        <span style="font-size: 22px;">Total:</span> <span class="price">{{totalPrice}}</span>
                     </div>
                 </div>
             </div>

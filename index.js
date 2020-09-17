@@ -2,14 +2,17 @@ const express = require('express')
 const exthbs = require('express-handlebars')
 const handlebars = require('handlebars')
 const mongoose = require('mongoose')
+const session = require('express-session')
 const {allowInsecurePrototypeAccess} = require('@handlebars/allow-prototype-access')
 const User = require('./model/user')
+const varMiddleware = require('./middlewares/variable')
 
 const homeRouter = require('./routes/home_router')
 const addRouter = require('./routes/add_router')
 const allCoursesRouter = require('./routes/all-courses_router')
 const cardRouter = require('./routes/card_router')
 const ordersRouter = require('./routes/orders_router')
+const authRouter = require('./routes/auth_router')
 
 const app = express()
 
@@ -36,11 +39,19 @@ app.use(async (req, res, next) => {
 })
 app.use(express.static('public'))
 app.use(express.urlencoded({extended: false}))
+app.use(session({
+    resave: false,
+    secret: 'Hello from Alaska',
+    saveUninitialized: false
+}))
+app.use(varMiddleware)
+
 app.use('/', homeRouter)
 app.use('/add', addRouter)
 app.use('/all-courses', allCoursesRouter)
 app.use('/card', cardRouter)
 app.use('/orders', ordersRouter)
+app.use('/auth', authRouter)
 
 
 const PORT = process.env.PORT || 3000

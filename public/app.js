@@ -1,4 +1,5 @@
 const prices = document.querySelectorAll('.price')
+const dates = document.querySelectorAll('.date')
 const cardElement = document.getElementById('card')
 
 function toCurrency(num) {
@@ -7,8 +8,22 @@ function toCurrency(num) {
         style: 'currency'
     }).format(num)
 }
+function toDate(num) {
+    return new Intl.DateTimeFormat('ru-RU', {
+        day: '2-digit',
+        mouth: 'long',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    }).format(new Date(num))
+}
 prices.forEach(price => {
     price.textContent = toCurrency(+price.textContent)
+})
+
+document.querySelectorAll('.date').forEach(date => {
+    date.textContent = toDate(date.textContent)
 })
 
 if(cardElement) {
@@ -65,4 +80,6 @@ if(cardElement) {
         }
     )
 }
+
+M.Tabs.init(document.querySelectorAll('.tabs'))
 

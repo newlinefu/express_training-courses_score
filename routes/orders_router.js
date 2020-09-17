@@ -16,7 +16,8 @@ router.get('/', async (req, res) => {
                     id: o._id,
                     courses: o.courses,
                     user: o.user,
-                    totalPrice: o.courses.reduce((acc, c) => c.count * c.price, 0)
+                    date: o.date,
+                    totalPrice: o.courses.reduce((acc, c) => acc += c.count * c.course.price, 0)
                 }
             })
         })
@@ -33,9 +34,11 @@ router.post('/', async (req, res) => {
 
         const courses = user.card.courses.map(c => {
             return {
-                id: c.courseId._id,
-                title: c.courseId.title,
-                price: c.courseId.price,
+                course: {
+                    id: c.courseId._id,
+                    title: c.courseId.title,
+                    price: c.courseId.price,
+                },
                 count: c.count
             }
         })
