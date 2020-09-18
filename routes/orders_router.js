@@ -1,8 +1,9 @@
 const {Router} = require('express')
+const auth = require('../middlewares/auth')
 const router = Router()
 const Order = require('../model/order')
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
     try {
         const orders = await Order.find({
             'user.id': req.user._id
@@ -26,7 +27,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     try {
         const user = await req.user
             .populate('card.courses.courseId')
@@ -53,11 +54,8 @@ router.post('/', async (req, res) => {
         await actualOrder.save()
         await user.clearCard()
 
-        res.render('orders', {
-            title: 'Orders',
-            isOrders: true,
-            courses: actualOrder.courses
-        })
+        res.redirect('/orders')
+
     } catch (err) {
         console.log(err)
     }

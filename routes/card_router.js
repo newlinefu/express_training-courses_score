@@ -1,8 +1,9 @@
 const {Router} = require('express')
+const auth = require('../middlewares/auth')
 const router = Router()
 const Card = require('../model/card')
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     const course = req.body
 
     await req.user.addToCard({...course})
@@ -10,7 +11,7 @@ router.post('/', async (req, res) => {
     res.redirect('/card')
 })
 
-router.delete('/delete/:id', async (req, res) => {
+router.delete('/delete/:id', auth, async (req, res) => {
     await req.user.deleteFromCard(req.params.id)
     const user = await req.user
         .populate('card.courses.courseId')
@@ -23,7 +24,7 @@ router.delete('/delete/:id', async (req, res) => {
     res.status(200).json(JSON.stringify(transformCard(user.card)))
 })
 
-router.get('/', async (req, res) => {
+router.get('/', auth, async (req, res) => {
     const user = await req.user
         .populate('card.courses.courseId')
         .execPopulate()

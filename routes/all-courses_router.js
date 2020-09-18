@@ -1,4 +1,5 @@
 const {Router} = require('express')
+const auth = require('../middlewares/auth')
 const router = Router()
 const Course = require('../model/course')
 
@@ -12,7 +13,7 @@ router.get('/', async (req, res) => {
     })
 })
 
-router.get('/:id/edit-course', async (req, res) => {
+router.get('/:id/edit-course', auth, async (req, res) => {
     if(!req.query.allow)
         return res.redirect('/all-courses')
     else {

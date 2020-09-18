@@ -9,6 +9,10 @@ const user = new Schema({
         type: String,
         required: true
     },
+    pass: {
+        type: String,
+        required: true
+    },
     card: {
         courses: [
             {
