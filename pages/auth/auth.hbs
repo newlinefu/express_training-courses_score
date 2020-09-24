@@ -8,22 +8,31 @@
         </div>
         <div id="authorizate" class="col s12">
             <h1>Authorization</h1>
+            {{#if authError}}
+                <div class="error">{{authError}}</div>
+            {{/if}}
             <form action="/auth/authorizate" method="POST" class="edit_form">
                 <div class="input-field col s12">
                     <input id="log_email" type="email" class="validate" name="email" required>
-                    <label for="price">Email</label>
+                    <label for="log_email">Email</label>
                 </div>
 
                 <div class="input-field col s12">
                     <input id="log_pass" type="password" class="validate" name="pass" required>
                     <label for="log_pass">Password</label>
                 </div>
-
+                <input type="hidden" value="{{csurf}}" name="_csrf">
+                <p>
+                    <a href="/auth/pass/reset">Forgot password?</a>
+                </p>
                 <button class="btn standart-btn">Authorizate</button>
             </form>
         </div>
         <div id="registrate" class="col s12">
             <h1>Registration</h1>
+            {{#if regError}}
+                <div class="error">{{regError}}</div>
+            {{/if}}
             <form action="/auth/registrate" method="POST" class="edit_form">
                 <div class="input-field col s12">
                     <input id="name" type="text" class="validate" name="name" required>
@@ -44,7 +53,7 @@
                     <input id="repeat_password" type="password" class="validate" name="rep_pass" required>
                     <label for="repeat_password">Password again</label>
                 </div>
-
+                <input type="hidden" value="{{csurf}}" name="_csrf">
                 <button class="btn standart-btn">Registrate</button>
             </form>
         </div>

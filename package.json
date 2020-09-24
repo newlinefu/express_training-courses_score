@@ -16,11 +16,15 @@
   "dependencies": {
     "@handlebars/allow-prototype-access": "^1.0.3",
     "bcrypt": "^5.0.0",
+    "connect-flash": "^0.1.1",
     "connect-mongodb-session": "^2.4.1",
+    "csurf": "^1.11.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
     "express-session": "^1.17.1",
     "mongoose": "^5.10.3",
+    "nodemailer": "^6.4.11",
+    "nodemailer-sendgrid-transport": "^0.2.0",
     "uuid": "^8.3.0"
   }
 }

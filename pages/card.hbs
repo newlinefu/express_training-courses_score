@@ -22,7 +22,7 @@
                       <td>{{price}}</td>
                       <td>{{count}}</td>
                       <td>
-                          <button class="btn standart-btn delete_course_btn" data-id="{{id}}">Delete</button>
+                          <button class="btn standart-btn delete_course_btn" data-id="{{id}}" data-csurfToken="{{@root.csurf}}">Delete</button>
                       </td>
                   </tr>
                 {{/each}}
@@ -31,6 +31,7 @@
         <p class="total-price">Total price: <span class="price">{{card.totalCount}}</span></p>
         <form method="POST" action="/orders">
             <button type="submit" class="btn">To order</button>
+            <input type="hidden" value="{{csurf}}" name="_csrf">
         </form>
     {{else}}
        <p>Your card is empty</p>

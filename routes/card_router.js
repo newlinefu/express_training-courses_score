@@ -21,7 +21,12 @@ router.delete('/delete/:id', auth, async (req, res) => {
 
     await user.save()
 
-    res.status(200).json(JSON.stringify(transformCard(user.card)))
+    res.status(200).json(
+        JSON.stringify({
+            ...transformCard(user.card),
+            csurf: req.csrfToken()
+        })
+    )
 })
 
 router.get('/', auth, async (req, res) => {
@@ -55,8 +60,6 @@ function transformCard(card) {
 
 function recalculateTotalPrice(card) {
     return card.courses.reduce((acc, item) => {
-        console.log('price: ' + item.courseId.price)
-        console.log('count ' + item.count)
         return acc += item.courseId.price * item.count
     }, 0)
 }

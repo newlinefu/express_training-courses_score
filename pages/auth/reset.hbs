@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col s12">
+        <h1>Reset password</h1>
+        {{#if authError}}
+            <div class="error">{{resetError}}</div>
+        {{/if}}
+        <form action="/auth/pass/reset" method="POST" class="edit_form">
+            <div class="input-field col s12">
+                <input id="mail_reset" type="email" class="validate" name="email" required>
+                <label for="mail_reset">Email</label>
+            </div>
+            <input type="hidden" value="{{csurf}}" name="_csrf">
+            <button class="btn standart-btn">Reset password</button>
+        </form>
+    </div>
+</div>

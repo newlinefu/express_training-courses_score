@@ -9,6 +9,8 @@ const user = new Schema({
         type: String,
         required: true
     },
+    tokenPassword: String,
+    tokenExp: Date,
     pass: {
         type: String,
         required: true

@@ -17,11 +17,12 @@
     </div>
 
     <input type="text" hidden value="{{course.id}}" name="id">
-
+    <input type="hidden" value="{{csurf}}" name="_csrf">
     <button class="btn standart-btn">Edit course</button>
 </form>
 
 <form action="/all-courses/delete-course" method="POST">
     <input type="hidden" value="{{course.id}}" name="id">
+    <input type="hidden" value="{{csurf}}" name="_csrf">
     <button class="btn red">Delete</button>
 </form>

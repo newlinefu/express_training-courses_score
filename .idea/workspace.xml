@@ -23,19 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a60dfa7a-be10-4c39-adff-fb55330a64d3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/middlewares/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/middlewares/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mail/Mail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/auth/reset.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middlewares/variable.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/variable.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/all-courses.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/all-courses.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/add_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/add_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/all-courses_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/all-courses_router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/auth/auth.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/auth/auth.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/card.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/card.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/edit-course.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/edit-course.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/put.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/pages/put.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth_router.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/card_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/card_router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/orders_router.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/orders_router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +111,13 @@
       <workItem from="1600359804124" duration="70000" />
       <workItem from="1600359897600" duration="888000" />
       <workItem from="1600361317271" duration="4132000" />
-      <workItem from="1600417788521" duration="2828000" />
+      <workItem from="1600417788521" duration="2895000" />
+      <workItem from="1600427131748" duration="10000" />
+      <workItem from="1600545389401" duration="779000" />
+      <workItem from="1600600991975" duration="4944000" />
+      <workItem from="1600682047087" duration="88000" />
+      <workItem from="1600707896899" duration="11000" />
+      <workItem from="1600969838529" duration="9020000" />
     </task>
     <servers />
   </component>
@@ -130,10 +141,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="542" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1598567123065" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600145603948">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1600707905880">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600145603948" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1600707905880" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1598548334269">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -142,13 +153,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1600420284952" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1600193094700">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1600974286052">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600193094700" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1598551948946">
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1600974286052" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1600974076762">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1598551948946" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1600974076762" />
   </component>
 </project>
